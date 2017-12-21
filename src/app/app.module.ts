@@ -15,7 +15,7 @@ import { PictureChooserComponent } from './widgets/picture-chooser/picture-choos
 import { DateComponent } from './date/date.component';
 import { FooterComponent } from './footer/footer.component';
 import { ConnectComponent } from './connect/connect.component';
-import { WorkoutsComponent } from './workouts/workouts.component';
+import { SearchComponent } from './search/search.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +29,8 @@ import { WorkoutsComponent } from './workouts/workouts.component';
     DateComponent,
     FooterComponent,
     ConnectComponent,
-    WorkoutsComponent
+    SearchComponent,
+  
   ],
   imports: [
     BrowserModule,
@@ -38,7 +39,7 @@ import { WorkoutsComponent } from './workouts/workouts.component';
         { path: "play", component: PlayComponent },
         { path: "home", component: IndexComponent },
         { path: "login", component: LoginrComponent },
-        { path: "workouts", component: ConnectComponent}
+        { path: "workouts", component: ConnectComponent},
         { path: "", pathMatch: "full", redirectTo: "/home" }
     ])
   ],
