@@ -1,5 +1,10 @@
 
 export class Quote {
+    constructor(t: string, p: string ){
+        this.text = t;
+        this.player= p;
+
+    }
     text: string;
     player: string;
 }
@@ -15,6 +20,5 @@ export class Player {
 export class Room {
     players: Player[] = [new Player(), new Player()];
     dealer: number;
-    picture: string;
     quotes: Quote[] = [];
 }

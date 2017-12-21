@@ -51,12 +51,12 @@ export class PlayComponent implements OnInit {
         })
     }
 
-    submitOwn(e: MouseEvent, quote: Quote){ // this doesnt work, but its supposed to submit your own "{text: quote}"
+    submitOwn(e: MouseEvent, name: string){ // this doesnt work, but its supposed to submit your own "{text: quote}"
         e.preventDefault;
-        const data = { text: quote.text, player: this.me.name }
+        const data = { text: name, player: this.me.name }
         this.http.post(this.game.apiRoot + "/game/room/quotes", data).subscribe(res=>{
             //this.me.quotes.splice(i, 1);
-            this.me.quotes.push( res.json() );            
+            this.me.quotes.push(new Quote(name,this.me.name));            
         })
 
     }

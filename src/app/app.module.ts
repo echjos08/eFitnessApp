@@ -38,7 +38,7 @@ import { WorkoutsComponent } from './workouts/workouts.component';
         { path: "play", component: PlayComponent },
         { path: "home", component: IndexComponent },
         { path: "login", component: LoginrComponent },
-        { path: "workouts", component: WorkoutsComponent}
+        { path: "workouts", component: ConnectComponent}
         { path: "", pathMatch: "full", redirectTo: "/home" }
     ])
   ],
