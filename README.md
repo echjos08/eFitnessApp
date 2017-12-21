@@ -1,5 +1,6 @@
 # 2017fall
-what do you meme
+WebProgramming Final Project:
 
-## This is a game
-Based on Bubble Talk
+## This is an app
+Which is a fitness app; 
+wish me luck.

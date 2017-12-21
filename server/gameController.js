@@ -17,6 +17,7 @@ router
         game.room.quotes.push(req.body);
         // res.status(201).send(game.getNextQuote());
     })
+    
     // .post("/room/quotes/choose",(req, res) => {
     //     const chosen = game.room.quotes[req.body.i];
     //     chosen.chosen = true;

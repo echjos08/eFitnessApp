@@ -4,6 +4,8 @@ import { Room, Player, Quote } from '../models/game';
 import { GameService } from '../models/game.service';
 import { Router } from '@angular/router';
 import { Image } from '../widgets/picture-chooser/picture-chooser.component'
+import { Text } from '@angular/compiler';
+
 
 declare const FB: any;
 
@@ -57,6 +59,15 @@ export class PlayComponent implements OnInit {
             this.me.quotes.push( res.json() );            
         })
 
+    }
+
+    removeQuote(e: MouseEvent, quote: Quote, i: number ){ //trying to remove 
+        e.preventDefault;
+        const data = { text: quote.text, player: this.me.name };
+        this.http.post(this.game.apiRoot + "/game/room/quotes", data).subscribe(res=>{
+            this.me.quotes.splice(i, 1);
+            this.me.quotes.pop();            
+        })
     }
 
     
